@@ -33,3 +33,4 @@ E:\Microservices\Microservices_pr\Ecommerce\Catalog.Infrastructure\obj\Debug\net
 E:\Microservices\Microservices_pr\Ecommerce\Catalog.Infrastructure\obj\Debug\net10.0\refint\Catalog.Infrastructure.dll
 E:\Microservices\Microservices_pr\Ecommerce\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.pdb
 E:\Microservices\Microservices_pr\Ecommerce\Catalog.Infrastructure\obj\Debug\net10.0\ref\Catalog.Infrastructure.dll
+E:\Microservices\Microservices_pr\Ecommerce\Catalog.Infrastructure\obj\Debug\net10.0\Catalog.Infrastructure.sourcelink.json

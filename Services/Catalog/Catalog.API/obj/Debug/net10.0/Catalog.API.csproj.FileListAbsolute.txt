@@ -103,3 +103,4 @@ E:\Microservices\Microservices_pr\Ecommerce\Services\Catalog\Catalog.API\obj\Deb
 E:\Microservices\Microservices_pr\Ecommerce\Services\Catalog\Catalog.API\obj\Debug\net10.0\Catalog.API.pdb
 E:\Microservices\Microservices_pr\Ecommerce\Services\Catalog\Catalog.API\obj\Debug\net10.0\Catalog.API.genruntimeconfig.cache
 E:\Microservices\Microservices_pr\Ecommerce\Services\Catalog\Catalog.API\obj\Debug\net10.0\ref\Catalog.API.dll
+E:\Microservices\Microservices_pr\Ecommerce\Services\Catalog\Catalog.API\obj\Debug\net10.0\Catalog.API.sourcelink.json

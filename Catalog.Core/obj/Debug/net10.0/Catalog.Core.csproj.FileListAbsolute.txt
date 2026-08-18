@@ -25,3 +25,4 @@ E:\Microservices\Microservices_pr\Ecommerce\Catalog.Core\obj\Debug\net10.0\Catal
 E:\Microservices\Microservices_pr\Ecommerce\Catalog.Core\obj\Debug\net10.0\refint\Catalog.Core.dll
 E:\Microservices\Microservices_pr\Ecommerce\Catalog.Core\obj\Debug\net10.0\Catalog.Core.pdb
 E:\Microservices\Microservices_pr\Ecommerce\Catalog.Core\obj\Debug\net10.0\ref\Catalog.Core.dll
+E:\Microservices\Microservices_pr\Ecommerce\Catalog.Core\obj\Debug\net10.0\Catalog.Core.sourcelink.json

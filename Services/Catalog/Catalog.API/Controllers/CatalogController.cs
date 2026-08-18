@@ -1,6 +1,6 @@
-﻿using Catalog.Application.Comand;
+﻿using Catalog.Application.Comands;
 using Catalog.Application.DTOs;
-using Catalog.Application.Mapper;
+using Catalog.Application.Mappers;
 using Catalog.Application.Queries;
 using Catalog.Core.Specification;
 using MediatR;
