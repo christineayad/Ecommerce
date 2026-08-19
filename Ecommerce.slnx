@@ -7,8 +7,6 @@
     <Project Path="Services/Basket/Basket.Infrastructure/Basket.Infrastructure.csproj" Id="d2899ec8-85b9-445a-a724-4916d682795e" />
   </Folder>
   <Folder Name="/Services/Catalog/">
-    <Project Path="Catalog.Core/Catalog.Core.csproj" />
-    <Project Path="Catalog.Infrastructure/Catalog.Infrastructure.csproj" />
     <Project Path="Services/Catalog/Catalog.API/Catalog.API.csproj" />
     <Project Path="Services/Catalog/Catalog.Application/Catalog.Application.csproj" />
   </Folder>
