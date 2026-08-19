@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Catalog.Application.Queries
 {
-    public record GetProuctByIdQuery(string id) : IRequest<ProductResponse>;
-    
+    public record GetAllProductByBrandQuery(string BrandName) : IRequest<IList<ProductResponse>>;
+   
+
 }
