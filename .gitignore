@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Visual Studio temporary files & caches
 .vs/
 bin/
@@ -9,3 +10,27 @@ obj/
 
 ## User-specific files
 launchSettings.json
+=======
+# Visual Studio
+.vs/
+
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.suo
+
+# Visual Studio
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+>>>>>>> fd26d221e263cf7d3a472c8207e2e1b853b12923

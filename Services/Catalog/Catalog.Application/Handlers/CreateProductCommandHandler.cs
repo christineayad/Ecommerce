@@ -1,13 +1,12 @@
-﻿using Catalog.Application.Comand;
-using Catalog.Application.Mapper;
+﻿using Catalog.Application.Comands;
+
+using Catalog.Application.Mappers;
 using Catalog.Application.Responses;
 using Catalog.Core.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Catalog.Application.Handler
+
+namespace Catalog.Application.Handlers
 {
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ProductResponse>
     {

@@ -9,6 +9,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using System.Reflection;
+using Catalog.Application.Handlers;
 
 var builder = WebApplication.CreateBuilder(args);
 

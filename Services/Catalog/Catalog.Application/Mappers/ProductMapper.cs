@@ -1,13 +1,11 @@
-﻿using Catalog.Application.Comand;
+﻿using Catalog.Application.Comands;
 using Catalog.Application.DTOs;
 using Catalog.Application.Responses;
 using Catalog.Core.Entities;
 using Catalog.Core.Specification;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Catalog.Application.Mapper
+
+namespace Catalog.Application.Mappers
 {
     public static class ProductMapper
     {

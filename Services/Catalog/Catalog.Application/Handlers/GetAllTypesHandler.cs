@@ -1,7 +1,7 @@
 ﻿using Catalog.Application.Queries;
 using Catalog.Application.Responses;
 using Catalog.Core.Repositories;
-using Catalog.Application.Mapper;
+using Catalog.Application.Mappers;
 
 using MediatR;
 

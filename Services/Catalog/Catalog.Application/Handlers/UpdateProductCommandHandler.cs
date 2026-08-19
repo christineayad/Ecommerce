@@ -1,5 +1,5 @@
-﻿using Catalog.Application.Comand;
-using Catalog.Application.Mapper;
+﻿using Catalog.Application.Comands;
+using Catalog.Application.Mappers;
 using Catalog.Core.Repositories;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
