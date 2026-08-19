@@ -70,6 +70,6 @@ namespace Catalog.Application.DTOs
         public string TypeId { get; init; }
 
         [Range(0.01, double.MaxValue, ErrorMessage = "Price must be greater than 0")]
-        public decimal Price { get; init; }
+        public string Price { get; init; }
     }
 }
