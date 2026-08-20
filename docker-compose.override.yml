@@ -6,6 +6,24 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  basketdb:
+    container_name: basketdb
+    restart: always
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+ 
 
   catalog:
     environment:
@@ -13,9 +31,19 @@ services:
       - "DatabaseSettings__ConnectionString=mongodb://catalogdb:27017"
       - "DatabaseSettings__DatabaseName=CatalogDb"
       - "DatabaseSettings__ProductCollectionName=Products"
-      - "BrandCollectionName=Brands"
+      - "DatabaseSettings__BrandCollectionName=Brands"
       - "DatabaseSettings__TypeCollectionName=Types"
     depends_on:
-      - catalogdb
+      catalogdb:
+        condition: service_healthy
     ports:
       - "8000:8080"
+  basket:
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - "CacheSettings__ConnectionString=basketdb:6379"
+    depends_on:
+      basketdb:
+        condition: service_healthy
+    ports:
+     - "8001:8080"

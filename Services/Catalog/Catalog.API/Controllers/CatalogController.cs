@@ -2,6 +2,7 @@
 using Catalog.Application.DTOs;
 using Catalog.Application.Mappers;
 using Catalog.Application.Queries;
+
 using Catalog.Core.Specification;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -49,7 +50,7 @@ namespace Catalog.API.Controllers
 
             return Ok(dtoList);
         }
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult<ProductDto>> CreateProduct(
     [FromBody] CreateProductCommand command)
         {
@@ -113,5 +114,5 @@ namespace Catalog.API.Controllers
         }
 
     }
-  
-    }
+
+}

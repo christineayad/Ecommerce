@@ -1,5 +1,5 @@
-﻿using Catalog.Infrastructure.Settings;
 using Catalog.Core.Entities;
+using Catalog.Infrastructure.Settings;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System;
@@ -14,6 +14,11 @@ namespace Catalog.Infrastructure.Data
         public static async Task SeedAsync(IOptions<DatabaseSettings> options)
         {
             var settings = options.Value;
+
+            if (string.IsNullOrEmpty(settings.ConnectionString))
+                throw new InvalidOperationException(
+                    "DatabaseSettings:ConnectionString is missing or empty in appsettings.json");
+
             var client = new MongoClient(settings.ConnectionString);
             var db = client.GetDatabase(settings.DatabaseName);
             var brands = db.GetCollection<ProductBrand>(settings.BrandCollectionName);
@@ -32,20 +37,32 @@ namespace Catalog.Infrastructure.Data
             }
             else
             {
-                brandList= await brands.Find(_ => true).ToListAsync();
+                brandList = await brands.Find(_ => true).ToListAsync();
             }
 
+            //Seed Types
+            //List<ProductType> typeList = new();
+            //if ((await types.CountDocumentsAsync(_ => true)) == 0)
+            //{
+            //    var brandData = await File.ReadAllTextAsync(Path.Combine(SeedBasePath, "brands.json"));
+            //    brandList = JsonSerializer.Deserialize<List<ProductBrand>>(brandData);
+            //    await brands.InsertManyAsync(brandList);
+            //}
+            //else {              
+
+            //   typeList = await types.Find(_ => true).ToListAsync();
+            //}
             //Seed Types
             List<ProductType> typeList = new();
             if ((await types.CountDocumentsAsync(_ => true)) == 0)
             {
-                var brandData = await File.ReadAllTextAsync(Path.Combine(SeedBasePath, "brands.json"));
-                brandList = JsonSerializer.Deserialize<List<ProductBrand>>(brandData);
-                await brands.InsertManyAsync(brandList);
+                var typeData = await File.ReadAllTextAsync(Path.Combine(SeedBasePath, "types.json"));
+                typeList = JsonSerializer.Deserialize<List<ProductType>>(typeData);
+                await types.InsertManyAsync(typeList);
             }
-            else {              
-                
-               typeList = await types.Find(_ => true).ToListAsync();
+            else
+            {
+                typeList = await types.Find(_ => true).ToListAsync();
             }
             //Seed Products
             if ((await products.CountDocumentsAsync(_ => true)) == 0)

@@ -33,5 +33,5 @@ namespace Catalog.Application.Handlers
             return product.ToResponse();
         }
 
-        }
     }
+}

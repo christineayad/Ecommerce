@@ -13,14 +13,14 @@ namespace Basket.Application.Handlers
     {
         private readonly IBasketRepository _basketRepository;
 
-  
-    public GetBasketByUserNameHandler(IBasketRepository basketRepository)
+
+        public GetBasketByUserNameHandler(IBasketRepository basketRepository)
         {
             _basketRepository = basketRepository;
         }
 
-  
-    public async Task<ShoppingCartResponse> Handle(GetBasketByUserNameQuery request, CancellationToken cancellationToken)
+
+        public async Task<ShoppingCartResponse> Handle(GetBasketByUserNameQuery request, CancellationToken cancellationToken)
         {
             var shoppingCart = await _basketRepository.GetBasket(request.UserName);
             if (shoppingCart == null)
@@ -31,8 +31,8 @@ namespace Basket.Application.Handlers
                 };
             }
 
-            return shoppingCart.ToResponse();
+            return shoppingCart.ToResponseUsingDelegate();
         }
     }
-    
+
 }

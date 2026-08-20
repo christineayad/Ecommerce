@@ -1,15 +1,15 @@
-using Catalog.Infrastructure.Settings;
 using Catalog.Application.Handler;
+using Catalog.Application.Handlers;
 using Catalog.Core.Repositories;
 using Catalog.Infrastructure;
 using Catalog.Infrastructure.Data;
+using Catalog.Infrastructure.Settings;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using System.Reflection;
-using Catalog.Application.Handlers;
 
 var builder = WebApplication.CreateBuilder(args);
 

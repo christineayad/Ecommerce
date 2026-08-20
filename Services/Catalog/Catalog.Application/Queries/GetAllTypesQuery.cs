@@ -1,4 +1,4 @@
-﻿using Catalog.Application.Responses;
+using Catalog.Application.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -6,6 +6,6 @@ using System.Text;
 
 namespace Catalog.Application.Queries
 {
-    public record GetAllTypesQuery : IRequest<List<TypeResponse>>;
+    public record GetAllTypesQuery : IRequest<IList<TypeResponse>>;
    
 }
