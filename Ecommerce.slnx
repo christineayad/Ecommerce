@@ -12,6 +12,12 @@
     <Project Path="Services/Catalog/Catalog.Core/Catalog.Core.csproj" />
     <Project Path="Services/Catalog/Catalog.Infrastructure/Catalog.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/Services/Discount/">
+    <Project Path="Services/Discount/Discount.API/Discount.API.csproj" Id="15a005c7-ca88-498b-8204-6eea20e12a87" />
+    <Project Path="Services/Discount/Discount.Application/Discount.Application.csproj" Id="ad58f1a8-97cd-48e3-8c3f-1cb34a593173" />
+    <Project Path="Services/Discount/Discount.Core/Discount.Core.csproj" Id="4bf41b31-d698-469b-a528-295c7db16e2c" />
+    <Project Path="Services/Discount/Discount.Infrastructure/Discount.Infrastructure.csproj" Id="dd806b91-9753-4148-85d9-ecc83229bc24" />
+  </Folder>
   <Project Path="docker-compose.dcproj">
     <Build />
   </Project>
